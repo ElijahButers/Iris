@@ -16,6 +16,8 @@ class ViewController: UIViewController {
   
   let monitor = MicMonitor()
   let assistant = Assistant()
+    let replicator = CAReplicatorLayer()
+    let dot = CALayer()
   
   override func viewDidLoad() {
     super.viewDidLoad()
