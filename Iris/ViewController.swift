@@ -18,6 +18,9 @@ class ViewController: UIViewController {
   let assistant = Assistant()
     let replicator = CAReplicatorLayer()
     let dot = CALayer()
+    let dotLength: CGFloat = 6.0
+    let dotOffset: CGFloat = 8.0
+    
   
   override func viewDidLoad() {
     super.viewDidLoad()
