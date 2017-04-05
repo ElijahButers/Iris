@@ -25,7 +25,8 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    
+    replicator.frame = view.bounds
+    view.layer.addSublayer(replicator)
   }
   
   @IBAction func actionStartMonitoring(_ sender: AnyObject) {
