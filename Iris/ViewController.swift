@@ -33,6 +33,7 @@ class ViewController: UIViewController {
     dot.borderColor = UIColor(white: 1.0, alpha: 1.0).cgColor
     dot.borderWidth = 0.5
     dot.cornerRadius = 1.5
+    replicator.addSublayer(dot)
   }
   
   @IBAction func actionStartMonitoring(_ sender: AnyObject) {
