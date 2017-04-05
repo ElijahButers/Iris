@@ -27,6 +27,12 @@ class ViewController: UIViewController {
     
     replicator.frame = view.bounds
     view.layer.addSublayer(replicator)
+    
+    dot.frame = CGRect(x: replicator.frame.size.width - dotLength, y: replicator.position.y, width: dotLength, height: dotLength)
+    dot.backgroundColor = UIColor.lightGray.cgColor
+    dot.borderColor = UIColor(white: 1.0, alpha: 1.0).cgColor
+    dot.borderWidth = 0.5
+    dot.cornerRadius = 1.5
   }
   
   @IBAction func actionStartMonitoring(_ sender: AnyObject) {
