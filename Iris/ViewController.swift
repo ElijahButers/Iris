@@ -34,6 +34,8 @@ class ViewController: UIViewController {
     dot.borderWidth = 0.5
     dot.cornerRadius = 1.5
     replicator.addSublayer(dot)
+    
+    replicator.instanceCount = Int(view.frame.size.width / dotOffset)
   }
   
   @IBAction func actionStartMonitoring(_ sender: AnyObject) {
