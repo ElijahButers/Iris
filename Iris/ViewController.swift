@@ -54,7 +54,16 @@ class ViewController: UIViewController {
   func startSpeaking() {
     print("speak back")
     
-    
+    let tint = CABasicAnimation(keyPath: "backgroundColor")
+    tint.fromValue = UIColor.magenta.cgColor
+    tint.toValue = UIColor.cyan.cgColor
+    tint.duration = 0.66
+    tint.beginTime = CACurrentMediaTime() + 0.28
+    tint.fillMode = kCAFillModeBackwards
+    tint.repeatCount = Float.infinity
+    tint.autoreverses = true
+    tint.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+    dot.add(tint, forKey: "dotColor")
   }
   
   func endSpeaking() {
