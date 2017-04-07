@@ -37,6 +37,7 @@ class ViewController: UIViewController {
     
     replicator.instanceCount = Int(view.frame.size.width / dotOffset)
     replicator.instanceTransform = CATransform3DMakeTranslation(-dotOffset, 0.0, 0.0)
+    replicator.instanceDelay = 0.02
   }
   
   @IBAction func actionStartMonitoring(_ sender: AnyObject) {
