@@ -55,6 +55,15 @@ class ViewController: UIViewController {
   func startSpeaking() {
     print("speak back")
     
+    let scale = CABasicAnimation(keyPath: "transform")
+    scale.fromValue = NSValue(caTransform3D: CATransform3DIdentity)
+    scale.toValue = NSValue(caTransform3D: CATransform3DMakeScale(1.4, 15, 1.0))
+    scale.duration = 0.33
+    scale.repeatCount = Float.infinity
+    scale.autoreverses = true
+    scale.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+    dot.add(scale, forKey: "dotScale")
+    
     let tint = CABasicAnimation(keyPath: "backgroundColor")
     tint.fromValue = UIColor.magenta.cgColor
     tint.toValue = UIColor.cyan.cgColor
