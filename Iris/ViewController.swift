@@ -64,6 +64,16 @@ class ViewController: UIViewController {
     scale.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
     dot.add(scale, forKey: "dotScale")
     
+    let fade = CABasicAnimation(keyPath: "opacity")
+    fade.fromValue = 1.0
+    fade.toValue = 0.2
+    fade.duration = 0.33
+    fade.beginTime = CACurrentMediaTime() + 0.33
+    fade.repeatCount = Float.infinity
+    fade.autoreverses = true
+    fade.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+    dot.add(fade, forKey: "dotOpacity")
+    
     let tint = CABasicAnimation(keyPath: "backgroundColor")
     tint.fromValue = UIColor.magenta.cgColor
     tint.toValue = UIColor.cyan.cgColor
