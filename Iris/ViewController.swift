@@ -84,6 +84,15 @@ class ViewController: UIViewController {
     tint.autoreverses = true
     tint.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
     dot.add(tint, forKey: "dotColor")
+    
+    let initialRotation = CABasicAnimation(keyPath: "instanceTransform.rotation")
+    initialRotation.fromValue = 0.0
+    initialRotation.toValue = 0.01
+    initialRotation.duration = 0.33
+    initialRotation.isRemovedOnCompletion = false
+    initialRotation.fillMode = kCAFillModeForwards
+    initialRotation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+    replicator.add(initialRotation, forKey: "initialRotation")
   }
   
   func endSpeaking() {
