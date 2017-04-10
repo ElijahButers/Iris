@@ -55,6 +55,10 @@ class ViewController: UIViewController {
   func startSpeaking() {
     print("speak back")
     
+    meterLabel.text = assistant.randomAnswer()
+    assistant.speak(meterLabel.text!, completion: endSpeaking)
+    speakButton.isHidden = true
+    
     let scale = CABasicAnimation(keyPath: "transform")
     scale.fromValue = NSValue(caTransform3D: CATransform3DIdentity)
     scale.toValue = NSValue(caTransform3D: CATransform3DMakeScale(1.4, 15, 1.0))
