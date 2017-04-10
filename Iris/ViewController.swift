@@ -93,6 +93,16 @@ class ViewController: UIViewController {
     initialRotation.fillMode = kCAFillModeForwards
     initialRotation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
     replicator.add(initialRotation, forKey: "initialRotation")
+    
+    let rotation = CABasicAnimation(keyPath: "instanceTransform.rotation")
+    rotation.fromValue = 0.01
+    rotation.toValue = -0.01
+    rotation.duration = 0.99
+    rotation.beginTime = CACurrentMediaTime() + 0.33
+    rotation.repeatCount = Float.infinity
+    rotation.autoreverses = true
+    rotation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+    replicator.add(rotation, forKey: "replicatorRotation")
   }
   
   func endSpeaking() {
