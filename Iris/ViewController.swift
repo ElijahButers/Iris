@@ -111,5 +111,7 @@ class ViewController: UIViewController {
   
   func endSpeaking() {
     
+    replicator.removeAllAnimations()
+    
   }
 }
