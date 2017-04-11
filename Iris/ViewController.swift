@@ -111,6 +111,13 @@ class ViewController: UIViewController {
   
   func endSpeaking() {
     
+    let scale = CABasicAnimation(keyPath: "transform")
+    scale.toValue = NSValue(caTransform3D: CATransform3DIdentity)
+    scale.duration = 0.33
+    scale.isRemovedOnCompletion = true
+    scale.fillMode = kCAFillModeForwards
+    dot.add(scale, forKey: nil)
+    
     replicator.removeAllAnimations()
     
   }
