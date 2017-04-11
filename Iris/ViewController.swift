@@ -118,6 +118,11 @@ class ViewController: UIViewController {
     scale.fillMode = kCAFillModeForwards
     dot.add(scale, forKey: nil)
     
+    dot.removeAnimation(forKey: "dotColor")
+    dot.removeAnimation(forKey: "dotOpacity")
+    dot.backgroundColor = UIColor.lightGray.cgColor
+    speakButton.isHidden = false
+    
     replicator.removeAllAnimations()
     
   }
