@@ -45,6 +45,8 @@ class ViewController: UIViewController {
     dot.backgroundColor = UIColor.green.cgColor
     monitor.startMonitoringWithHandler { level in
         self.meterLabel.text = String(format: "%.2f db", level)
+        
+    let scaleFactor = max(0.2, CGFloat(level) + 50) / 2
     }
   }
   
