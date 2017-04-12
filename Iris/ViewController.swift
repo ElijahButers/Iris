@@ -42,6 +42,10 @@ class ViewController: UIViewController {
   
   @IBAction func actionStartMonitoring(_ sender: AnyObject) {
     
+    dot.backgroundColor = UIColor.green.cgColor
+    monitor.startMonitoringWithHandler { level in
+        self.meterLabel.text = String(format: "%.2f db", level)
+    }
   }
   
   @IBAction func actionEndMonitoring(_ sender: AnyObject) {
