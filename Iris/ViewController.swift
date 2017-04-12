@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     let dot = CALayer()
     let dotLength: CGFloat = 6.0
     let dotOffset: CGFloat = 8.0
+    var lastTransfromScale: CGFloat = 0.0
     
   
   override func viewDidLoad() {
