@@ -62,6 +62,9 @@ class ViewController: UIViewController {
   
   @IBAction func actionEndMonitoring(_ sender: AnyObject) {
     
+    monitor.stopMonitoring()
+    dot.removeAllAnimations()
+    
     //speak after 1 second
     delay(seconds: 1.0, completion: {
       self.startSpeaking()
