@@ -48,6 +48,14 @@ class ViewController: UIViewController {
         self.meterLabel.text = String(format: "%.2f db", level)
         
     let scaleFactor = max(0.2, CGFloat(level) + 50) / 2
+        
+    let scale = CABasicAnimation(keyPath: "transform.scale.y")
+    scale.fromValue = self.lastTransfromScale
+    scale.toValue = scaleFactor
+    scale.duration = 0.1
+    scale.isRemovedOnCompletion = false
+    scale.fillMode = kCAFillModeForwards
+    self.dot.add(scale, forKey: nil)
     }
   }
   
