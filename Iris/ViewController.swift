@@ -56,6 +56,7 @@ class ViewController: UIViewController {
     scale.isRemovedOnCompletion = false
     scale.fillMode = kCAFillModeForwards
     self.dot.add(scale, forKey: nil)
+    self.lastTransfromScale = scaleFactor
     }
   }
   
